@@ -31,7 +31,7 @@ def build_ngram_model(texts: List[List[str]], n: int) -> Dict[Tuple[str, ...], D
 build_ngram_model([sample1, sample2], n=3)
 
 full_text = []
-with open('arthur-conan-doyle.tok.train.txt', 'rt') as fin:
+with open('./arthur-conan-doyle.tok.train.txt', 'rt') as fin:
     for line in fin:
         full_text.append(list(line.split()))
 model = build_ngram_model(full_text, n=3)
